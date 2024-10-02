@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+}
+
+.gradient-background {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(49deg, rgba(57,253,197,1) 20%, rgba(57,253,250,1) 40%, rgba(57,204,253,1) 60%, rgba(57,131,253,1) 80%, rgba(0,19,255,1) 100%);
+    background-size: 300% 300%; /* Make the gradient larger than the container */
+    animation: moveGradient 30s linear infinite; /* Apply the animation */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+  }
+  
+  @keyframes moveGradient {
+    0% {
+      background-position: 0% 0%;
+    }
+    50% {
+      background-position: 100% 100%;
+    }
+    100%{
+        background-position: 0% 0%;
+    }
+  }
+
+  button{
+    padding: 0;
+    border: none;
+    background-color: rgb(60, 0, 255);
+    height: 5vmax;
+    width: 15vmax;
+    box-shadow: .8vmax .8vmax 0 0 rgb(45, 19, 109);
+    transition: .1s ease-in;
+  }
+
+  button:hover{
+    transition: .1s ease-in;
+    cursor: pointer;
+    box-shadow: .5vmax .5vmax 0 0 rgb(45, 19, 109);
+  }
+  button:active{
+    cursor: pointer;
+    box-shadow: none;
+  }
+
+  form{
+    padding-top: 5%;
+    width: 20%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  a{
+    color: black;
+    text-decoration: none;
+    position: inherit;
+    bottom: 5%;
+    transition: .5s linear;
+  }
+
+  a:hover{
+    transition: 0s linear;
+    color: azure;
+  }
+
+  input{
+    padding: .4vmax;
+    border: .2vmin dashed rgb(255, 255, 255);
+    outline: none;
+    background-color: rgb(89, 205, 255);
+    transition: .5s ease-in;
+  }
+
+  input:hover{
+    transition: 0s ease-in;
+    background-color: rgb(60, 0, 255);
+  }
+
+  input:focus{
+    background-color: rgb(60, 0, 255);
+  }
+
+
+    input:focus::placeholder {
+        color: snow;
+    }

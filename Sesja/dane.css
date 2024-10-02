@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+}
+
+.gradient-background {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(49deg, rgba(57,253,197,1) 20%, rgba(57,253,250,1) 40%, rgba(57,204,253,1) 60%, rgba(57,131,253,1) 80%, rgba(0,19,255,1) 100%);
+    background-size: 300% 300%; /* Make the gradient larger than the container */
+    animation: moveGradient 30s linear infinite; /* Apply the animation */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+  }
+  
+  @keyframes moveGradient {
+    0% {
+      background-position: 0% 0%;
+    }
+    50% {
+      background-position: 100% 100%;
+    }
+    100%{
+        background-position: 0% 0%;
+    }
+  }
+
+.gradient-background {
+text-align: left;
+}
+.highlight{
+animation-name: zmianaKoloru;
+animation-duration: 2s;
+animation-iteration-count: infinite;
+text-align: left;
+}
+
+@keyframes zmianaKoloru{
+  0%{
+      color: black;
+  }
+  50%{
+      transition: .5s linear;
+      color: snow;
+  }
+  100%{
+      transition: .5s linear;
+      color: black;
+  }
+}
+.ranking-results {
+display: flex;
+flex-direction: column;
+justify-content: end;
+height: 50%;
+top:10%;
+text-align: left;
+}
+
+a{
+  color: black;
+  text-decoration: none;
+  position: inherit;
+  bottom: 5%;
+  transition: .5s linear;
+}
+
+a:hover{
+  transition: 0s linear;
+  color: azure;
+}
+
+h1{
+  font-weight: bold;
+  color: snow;
+}

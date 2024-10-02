@@ -56,9 +56,8 @@ if ($result->num_rows > 0) {
 
 $conn->close();
 ?>
-
 <?php
-if($_SESSION['imie']&& $_SESSION['nazwisko']){
+if(isset($_SESSION['imie']) && isset($_SESSION['nazwisko'])){
 ?>
 <!DOCTYPE html>
 <html lang="pl">
@@ -98,20 +97,20 @@ if($_SESSION['imie']&& $_SESSION['nazwisko']){
 }else{
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link rel="stylesheet" href="dane.css?v=<?php echo time(); ?>" />
+    <title>Dane</title>
 </head>
 <body>
     <div class="gradient-background">
-        <h1>Nie podałeś nam jeszcze swoich danych!</h1>
-        <a href="main.php">Wroc aby podac nam swoje dane!</a>
+        <h1>Nie podałeś swoich danych!</h1>
+        <a href="main.php">Kliknij aby wrocic do klikania!</a>
     </div>
 </body>
 </html>
 <?php
-}
+};
 ?>
